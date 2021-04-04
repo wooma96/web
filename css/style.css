@@ -1,0 +1,110 @@
+﻿@charset "utf-8";
+@import url(https://cdn.jsdelivr.net/gh/moonspam/NanumSquare@1.0/nanumsquare.css);
+
+/* reset */
+* { margin:0; padding:0; }
+li { list-style-type:none; }
+img { border:0; vertical-align:middle; }
+address { font-style:normal; }
+a { color:#333; text-decoration:none; }
+
+body { width:1200px; height:3470px; font-size:21px; font-family:'NanumSquare', sans-serif; color:#333; background-color:#fff; text-align:center; margin:0 auto; }
+
+/* header */
+header { width:1200px; height:100px; position:relative; }
+
+/* header popoUp */
+#popUp { position:absolute; text-align:center; left:400px; top:100px; width:400px; height:550px; border:1px solid #000; box-shadow:3px 3px 3px #000;  z-index:9999; }
+	.close { position:absolute; left:375px; top:10px;  }
+		.close a { color:#fff; }
+/* header nav */
+#nav { width:1000px; height:150px; background-color:rgba(0, 0, 0, 0.8); position:absolute; left:100px; top:40px; z-index:999; }
+
+	/* 로고 */
+	#Logo { width:147px; height:83px; background-image:url(../images/logo.png); text-indent:-9999px; margin-top:17px; margin-left:105px; }
+		#nav h2 { color:#fff; margin-left:66px; float:left; margin-top:13px; font-size:20px; letter-spacing:3px; } 
+		
+	/* 메뉴 */
+	#gnb {  clear:both; position:relative; left:360px; top:-70px; }
+		#gnb li { float:left;   }
+			#gnb li.menu { margin-right:55px; }
+			#gnb li a { color:#fff; font-size:17px; font-weight:bold;  }
+
+			#gnb ul { opacity:0; pointer-events:none; position:absolute; left:0px; top:30px; background:#fff; padding:7px 0 7px 0; transition:all 1s; }
+				#gnb ul li {  margin-left:50px;  }
+					#gnb ul li:first-child { margin-left:50px; }
+					#gnb ul li:last-child { margin-right:50px; }
+					#gnb ul li a { color:#555; font-size:17px; }
+								
+					#gnb li.menu:hover { text-decoration:underline; }	
+					#gnb li.menu:hover ul { opacity:1; pointer-events:auto;}
+					
+					#gnb li.menu1:hover ul { display:block; }	
+					#gnb li.menu2 ul{ display:absolute; left:100px; }
+						#gnb li.menu2:hover ul { display:block; left:100px; }
+					#gnb li.menu3 ul{ display:absolute;  left:200px; }
+						#gnb li.menu3:hover ul { display:block; left:200px; }
+			
+					#gnb li.menu ul.sub li:hover a { color:#000; }
+			
+					#gnb li a.link { width:30px; padding:10px 0; }
+/* main */ 
+main {}
+	
+	/* 이미지 슬라이더 */
+	#slider { position:relative; width:1200px; height:1000px; top:-130px;  overflow:hidden; }	
+		#slider .imgwrap img { position:absolute; left:0; top:0; }
+		
+	/* arrow */
+	div .btn { position:relative; top:-1100px;; left:0; }
+	.arrowLeft { position:absolute; top:435px; left:38px; }
+	.arrowRight { position:absolute; top:435px; right:38px; }
+	.arrowMain { position:absolute; top:830px; left:565px; box-shadow:3px 3px 3px #000;  }
+		
+/* section 01 about */
+#about { background-color:#ebebeb; width:1200px; height:500px; position:relative; top:-130px;}
+	.P1Title { float:left; position:absolute; left:112px; top:104px; text-align:left; font-weight:bold; font-size:36px;}
+	.P1Text { float:left; position:absolute; left:112px; top:214px; text-align:left; font-size:18px; }
+	
+	.P1Images img:first-child { position:absolute; right:415px; top:104px; }
+	.P1Images img:last-child { position:absolute; right:89px; top:104px; }
+	
+/* section 02 room */
+#room { clear:both; width:1199px; height:799px; background-image:url(../images/roomBG.jpg); position:relative; top:-130px; border:1px solid #fff; }
+	.title { margin-top:120px; font-size:48px; font-weight:bold; text-decoration:underline; }
+	.titleSub { margin-top:10px; font-size:24px; }
+	.room { width:250px; height:300px; float:left; margin-left:25px; margin-top:90px; background:#fff; box-shadow:4px 4px 4px #222; }
+		.room:first-child { margin-left:62px; }
+			.room p { text-align:left; margin-left:20px; margin-top:5px; font-size:12px; line-height:15px; }
+			.room .num { margin-top:20px; font-size:18px; font-weight:bold; }
+			.room .last {  margin-top:25px; }
+			
+	.view { clear:both; position:relative; display:inline-block; width:300px; height:50px; background:#fff; box-shadow:4px 4px 4px #222; margin-top:70px; }
+		.view p { float:left; font-size:16px; font-weight:bold; color:#000; margin-left:40px;  margin-top:17px; transition:all 1s; }
+		.view img { position:absolute; top:17px; right:40px;  }
+		
+/* section 03 special */
+#special { width:1198px; height:998px; position:relative; top:-131px; background:#ebebeb; border:1px solid #ebebeb; }
+	article { float:left; margin-top:97px; color:#fff; }
+		article.left { margin-left:65px; text-align:left; }
+			article.left div { width:550px; height:200px; margin-bottom:20px;}
+				article.left div.private { background:url(../images/specialImg01.jpg); box-shadow:5px 5px 5px #555;  }
+				article.left div.amenity { background:url(../images/specialImg02.jpg); box-shadow:5px 5px 5px #555; }
+				article.left div.service { background:url(../images/specialImg03.jpg); box-shadow:5px 5px 5px #555; }
+				article.left div.detail { width:150px; height:40px; background:#fff;  margin-left:380px; margin-top:33px; text-align:center; line-height:40px; box-shadow:3px 3px 3px #111; }
+					article.left div.detail a { color:#000; font-size:16px; font-weight:bold; }
+			article.left p { margin-left:40px; }
+				article.left p.bar {font-size:1px; background:#fff; }
+				article.left p.SText { font-size:30px; font-weight:bold; margin-top:10px; }
+				article.left p.STextSub { font-size:18px; margin-top:5px; }
+			article.left img { margin-top:35px;  }
+				
+		article.right { width:500px; height:640px; background:url(../images/guideImg.jpg); margin-left:20px; box-shadow:5px 5px 5px #555;}
+			article.right div { }
+			.GText { margin-top:240px; font-size:60px; font-weight:bold; color:#fff; }
+			.more { width:200px; height:50px; border:3px solid #fff; margin-left:150px; margin-top:20px; box-shadow:3px 3px 3px #111; cursor:pointer; }
+				.more p { margin-top:13px;  }
+					.more p a { font-size:24px; font-weight:bold; color:#fff;  }
+/* footer */	 
+footer { position:relative; top:-130px; height:200px; background-color:#484848; }		
+	address { font-size:16px; font-weight:bold; line-height:30px; color:#fff; padding-top:45px; }
